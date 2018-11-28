@@ -7,7 +7,7 @@
 $ git clone https://github.com/siansiansu/peterparker-crawler.git
 $ pip install -p Pipfile.lock  # install requirements
 $ pip shell
-$ python3 crawler.py
+$ python3 main.py
 
 # Current Running: 華創實業股份有限公司
 # Current Running: 崇友實業股份有限公司
