@@ -26,12 +26,12 @@ $ python3 crawler.py
 > 每間公司的資料會些許不同，視情況加入 TryExcept 例外處理。
 
 ## 網站首頁 
-[商工登記公示資料查詢服務首頁](https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do#)，輸入關鍵字查詢登記的公司。
+點進去[商工登記公示資料查詢服務首頁](https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do#)，輸入關鍵字查詢登記的公司。
 
 ![](https://i.imgur.com/lvLE6aR.png)
 
 ## 公司詳細資訊
-點進去公司詳細資訊後，可以看到「公司基本資料」、「董監事資料」、「經理人資料」、「分公司資料」、「跨域資料」，Scripts 只有抓取公司基本資料，其餘的部分可以依照同樣的方式使用 selenium 抓取。 
+按一下公司的詳細資訊按鈕，可以看到「公司基本資料」、「董監事資料」、「經理人資料」、「分公司資料」、「跨域資料」，我只有抓取公司的基本資料，其餘部分可以依照類似的方式抓取資料。 
 
 ![](https://i.imgur.com/bqxivg8.png)
 
