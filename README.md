@@ -1,11 +1,12 @@
 # peterparker-crawler
-經濟部商業司，公司/工廠登記資料爬蟲 (Web crawler by using python selenium)
+公司/工廠登記資料爬蟲程式 (Web crawler by using python selenium)。
 
-## Usage
+## 使用方法
 
 ```shell
 $ git clone https://github.com/siansiansu/peterparker-crawler.git
 $ pip install -p Pipfile.lock  # install requirements
+$ pip shell
 $ python3 crawler.py
 ```
 
@@ -15,7 +16,7 @@ $ python3 crawler.py
 - 日月光半導體製造股份有限公司
 - 鴻海有限公司
 
-> 注意每間公司的表格資料可能會些許不同，抓取資料下來還得另外清洗資料。
+> 注意每間公司的表格資料可能會些許不同，抓取資料下來後得另外清洗資料。
 
 ## 網站首頁 
 [商工登記公示資料查詢服務首頁](https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do#)，輸入關鍵字查詢登記的公司。
@@ -31,5 +32,4 @@ $ python3 crawler.py
 以 JSON 檔的方式儲存在 `./results` 資料夾裡面。
 
 ![](https://i.imgur.com/nLQFxID.png)
-
 
