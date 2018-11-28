@@ -1,5 +1,5 @@
 # peterparker-crawler
-公司/工廠登記資料爬蟲程式 (Web crawler by using python selenium)。
+公司/工廠登記資料爬蟲程式 (Web crawler by using python selenium)，原始專案不公開，所以只放測試資料集。
 
 ## 使用方法
 
