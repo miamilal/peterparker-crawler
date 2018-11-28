@@ -8,6 +8,12 @@ $ git clone https://github.com/siansiansu/peterparker-crawler.git
 $ pip install -p Pipfile.lock  # install requirements
 $ pip shell
 $ python3 crawler.py
+
+# Current Running: 華創實業股份有限公司
+# Current Running: 崇友實業股份有限公司
+# Current Running: 日月光半導體製造股份有限公司
+# Current Running: 鴻海有限公司
+# Current Running: 采鈺科技股份有限公司
 ```
 
 ## 測試的公司名稱
@@ -15,8 +21,10 @@ $ python3 crawler.py
 - 崇友實業股份有限公司
 - 日月光半導體製造股份有限公司
 - 鴻海有限公司
+- 采鈺科技股份有限公司
 
-> 每間公司的資料可能會些許不同，抓取資料下來後得另外清洗資料。
+> 每間公司的資料會些許不同，視情況加入 TryExcept 例外處理。
+> 程式碼不包含抓取後資料清洗的部分。
 
 ## 網站首頁 
 [商工登記公示資料查詢服務首頁](https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do#)，輸入關鍵字查詢登記的公司。

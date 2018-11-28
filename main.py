@@ -9,56 +9,21 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from pandas.io.json import json_normalize
 
-class BrowserDriverCrawler:
+from tools.crawler import BrowserDriverCrawler
+
+class ExtractData(object):
     def __init__(self, dataPath):
         self.dataPath = dataPath
     
     def readData(self):
-        df = pd.read_csv(self.dataPath, usecols=['公司'])
-        df.rename(columns={"公司": "company"}, inplace=True)
-
-        # clean data 
-        ll = df['company'][(~df['company'].str.contains("查不到", regex=False)) &
-                           (~df['company'].str.contains("?", regex=False)) &
-                           (~df['company'].str.contains("[a-zA-Z0-9]"))
-                                      ].tolist()
+        df = pd.read_csv(self.dataPath, usecols=['company'])
+        ll = df['company'].tolist()
         return ll
-
-    def FirefoxCrawler(self, searchName):
-        # Open Firefox
-        driver = webdriver.Firefox()
-        url = "https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do"
-        driver.get(url)
-        
-        time.sleep(random.randint(2, 3))
-        
-        # Send Keywords
-        driver.find_element_by_id('qryCond').send_keys(searchName)
-        driver.find_element_by_id("qryBtn").click()
-
-        time.sleep(random.randint(2, 3))
-        
-        # ButtonClick
-        href = driver.find_element_by_class_name("hover").get_attribute('href')
-        src = driver.execute_script("window.open('" + href +"');")
-
-        time.sleep(random.randint(2, 3))
-
-        # Switch tab
-        handles = driver.window_handles
-        driver.switch_to.window(handles[1])
-
-        # HTML Parser 
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-        
-        driver.quit()
-        return soup
     
-    def ExtractDataToJson(self, searchName):
-        soup = self.FirefoxCrawler(searchName)
+    def ToJson(self, searchName):
+        soup = BrowserDriverCrawler().LaunchFirefox(searchName)
         txt = soup.findAll("table", class_="table table-striped")[13].text
         pre = re.findall("[^\n\t\xa0]+", txt)
-
 
         d = {"公司基本資料": {
             "統一編號": "",
@@ -141,13 +106,13 @@ class BrowserDriverCrawler:
 
 def main():
     dataPath = "./data/exampleData.csv" 
-    f = BrowserDriverCrawler(dataPath) 
+    f = ExtractData(dataPath) 
     search_list = f.readData() 
 
     result = []
     for searchName in search_list: 
         print("Current Running: {}".format(searchName))
-        info = f.ExtractDataToJson(searchName)
+        info = f.ToJson(searchName)
         result.append(info)
 
     with open('./results/company.json', 'w') as outfile:  
