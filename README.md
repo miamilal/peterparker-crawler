@@ -1,4 +1,7 @@
 # peterparker-crawler
+
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg) [![codebeat badge](https://codebeat.co/badges/08c1b39e-9c0b-4c73-82bd-270e62a29fa9)](https://codebeat.co/projects/github-com-siansiansu-peterparker-crawler-master)
+
 公司/工廠登記資料爬蟲程式 (Web crawler by using python selenium)，原始專案不公開，所以只放部分程式碼和測試資料。
 
 ## 使用方法
