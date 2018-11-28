@@ -1,5 +1,5 @@
 # peterparker-crawler
-公司/工廠登記資料爬蟲程式 (Web crawler by using python selenium)，原始專案不公開，所以只放測試資料集。
+公司/工廠登記資料爬蟲程式 (Web crawler by using python selenium)，原始專案不公開，所以只放部分程式碼和測試資料。
 
 ## 使用方法
 
@@ -39,6 +39,10 @@ $ python3 crawler.py
 以 JSON 檔的格式儲存在 `./results` 資料夾裡面。
 
 ![](https://i.imgur.com/nLQFxID.png)
+
+## Dependencies
+- [Firefox](https://www.mozilla.org/zh-TW/firefox/new/)
+- [geckodriver](https://github.com/mozilla/geckodriver/releases)
 
 ## Contact Me
 Alex Su: minsiansu@gmail.com
