@@ -24,7 +24,6 @@ $ python3 crawler.py
 - 采鈺科技股份有限公司
 
 > 每間公司的資料會些許不同，視情況加入 TryExcept 例外處理。
-> 程式碼不包含抓取後資料清洗的部分。
 
 ## 網站首頁 
 [商工登記公示資料查詢服務首頁](https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do#)，輸入關鍵字查詢登記的公司。
