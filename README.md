@@ -1,6 +1,6 @@
 # peterparker-crawler
 
-[![codebeat badge](https://codebeat.co/badges/08c1b39e-9c0b-4c73-82bd-270e62a29fa9)](https://codebeat.co/projects/github-com-siansiansu-peterparker-crawler-master) ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+[![codebeat badge](https://codebeat.co/badges/08c1b39e-9c0b-4c73-82bd-270e62a29fa9)](https://codebeat.co/projects/github-com-siansiansu-peterparker-crawler-master) ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg) [![DOI](https://zenodo.org/badge/159433684.svg)](https://zenodo.org/badge/latestdoi/159433684)
 
 公司/工廠登記資料爬蟲程式 (Web crawler by using python selenium)，原始專案不公開，所以只放測試資料。
 
